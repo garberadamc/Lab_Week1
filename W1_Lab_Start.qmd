@@ -62,20 +62,6 @@ class_data <-
 
 ------------------------------------------------------------------------
 
-### Create a first plot in R using `ggplot`
-
-Pets ↔ Height: Is `height` related to having `pets`?
-
-------------------------------------------------------------------------
-
-```{r}
-
-
-
-```
-
-------------------------------------------------------------------------
-
 ### Exploring classroom height
 
 Survey question: *What is your height (inches)?* 
