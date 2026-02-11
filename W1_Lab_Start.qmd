@@ -19,28 +19,10 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 -   If a `yellow banner` appears at top of screen, asking you to install packages click `YES`
 -   Packages include functions other R users have made for us to make our lives easier!
 
-
 ------------------------------------------------------------------------
 
-Install packages
-
-```{r, eval=FALSE}
-# If yellow banner appeared & you clicked 'yes': SKIP A. / Start at B. 
-
-# A.
-
-# c("tidyverse","here","janitor","ggthemes","ggridges","viridis") |>
-#  purrr::walk(~ if (!requireNamespace(.x, quietly = TRUE)) install.packages(.x))
-
-# B. 
-
-install.packages("remotes")
-remotes::install_github("MatthewBJane/ThemePark")
-```
-
-
+Load packages
 ```{r}
-# Step 2: Load packages
 
 library(tidyverse)
 library(here)
@@ -253,9 +235,9 @@ Survey question: *What is your favorite season?*
 class_data |>
   ggplot(aes(x = , fill = )) +
   geom_bar() +
-  labs(title = "",
-  x = "",
-  y = "") +
+  labs(title = "What is your favorite season?",
+  x = "Favorite Season",
+  y = "Count") +
   guides(fill = "none")
 
 ```
@@ -283,9 +265,9 @@ class_data |>
   #        ordered = TRUE)) |>
   ggplot(aes(x = , fill = )) +
   geom_bar() +
-  labs( title = "",
-    x = "",
-    y = "") +
+  labs( title = "Preferred wake up time?",
+    x = "Wake up time",
+    y = "Student Count") +
   guides(fill = "none")
 
 ```
@@ -304,9 +286,9 @@ class_data |>
 ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(
-    title = "",
+    title = "Which is your dominant hand?",
     x = "",
-    y = "") +
+    y = "Count") +
   theme(legend.position = "none")
 
 ```
@@ -353,10 +335,10 @@ class_data |>
 ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(
-    title = "",
-    subtitle = "",
+    title = "Risk preference",
+    subtitle = "Which would you choose?",
     x = "",
-    y = "") +
+    y = "Student Count") +
   theme(legend.position = "none")
 ```
 
@@ -374,9 +356,9 @@ class_data |>
 ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(
-    subtitle = "",
+    subtitle = "Do you prefer background sound while studying?",
     x = "",
-    y = ""
+    y = "Student Count"
   ) +
   theme(legend.position = "none")
 
