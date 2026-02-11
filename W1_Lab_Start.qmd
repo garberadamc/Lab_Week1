@@ -41,7 +41,7 @@ library(ThemePark)
 > MAC / *WINDOWS*
 
 - `Run code` (at cursor): COMMAND/*CONTROL* + RETURN/*ENTER*
-- `Pipe operator` (`|>`): COMMAND/*CONTROL* + SHIFT + M
+- `Pipe operator` (`%>%`): COMMAND/*CONTROL* + SHIFT + M
 - `Add code chunk`: COMMAND/*CONTROL* + OPTION/*ALT* + I
 - `Assignment operator` (`<-`): OPTION/*ALT* + MINUS("-") 
 - `Search`: COMMAND/*CONTROL* + F
@@ -218,7 +218,7 @@ Survey question: *What is your favorite season?*
 
 ```{r}
 
-class_data |>
+class_data %>%
   ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(title = "What is your favorite season?",
@@ -244,11 +244,11 @@ Survey question: *What is your preferred wake up time?*
 
 ```{r}
 
-class_data |>
+class_data %>%
   # mutate(wake_up_time = 
   #        factor(wake_up_time,
   #        levels = c("6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm (or later)"),
-  #        ordered = TRUE)) |>
+  #        ordered = TRUE)) %>%
   ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs( title = "Preferred wake up time?",
@@ -268,7 +268,7 @@ Survey question: *Which is your dominant hand?*
 
 ```{r}
 
-class_data |> 
+class_data %>% 
 ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(
@@ -294,7 +294,7 @@ Survey question: *Do you have any pets?*
 ------------------------------------------------------------------------
 
 ```{r}
-class_data |> 
+class_data %>% 
 ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(
@@ -316,8 +316,8 @@ b. *A 50% chance to win $24*
 ------------------------------------------------------------------------
 
 ```{r}
-class_data |> 
-  #mutate(risk_pref = fct_rev(risk_pref)) |> 
+class_data %>% 
+  #mutate(risk_pref = fct_rev(risk_pref)) %>% 
 ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(
@@ -338,7 +338,7 @@ Survey question: *Do you prefer background sound while studying?*
 
 ```{r}
 
-class_data |> 
+class_data %>% 
 ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs(
