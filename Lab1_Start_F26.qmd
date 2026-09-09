@@ -1,5 +1,5 @@
 ---
-title: "Code-along → Explore & Get Started in R"
+title: "Lab 1: Explore & Get Started in R"
 subtitle: "Lab 1 - PSY 150"
 author: "ADD_YOUR_NAME_HERE"
 date: "`r Sys.Date()`"
@@ -40,16 +40,86 @@ library(ThemePark)
 
 ------------------------------------------------------------------------
 
+### How this lab will work!
+
+- Work from top to bottom. 
+- Run a *code chunk* (grey box) by clicking the green triangle (upper right corner) OR by placing your cursor in the chunk and pressing **Ctrl + Shift + Enter** (Windows)
+
+
+### Run the next `code chunk`
+
+Rectangles beginning and ending with three backticks contain R code. Running a chunk executes its lines in order and displays the results.
+
+```{r}
+
+cat("Hello, World!\n")
+
+```
+
+
+The fundamental building block of R code is an **expression**. 
+
+- A code chunk can contain multiple expressions 
+- R runs them from top to bottom
+- You can also include comments in a code block using the `#` symbol 
+
+```{r}
+# This is a comment, not R code!
+
+cat("First this line is printed,\n")
+cat("then the whole 🌏,\n")
+cat("and then this one.\n")
+```
+
+### Adding a new code chunk
+
+You can add a new R chunk by clicking the green +C button above OR by using the keyboard shortcut **Ctrl + Alt + I** (Windows).
+
+Add a new R code chunk below this paragraph. Use `cat()` to print:
+
+``` text
+A whole new chunk! ♪ 🌏 ♪
+```
+
+Run your new chunk to verify that it works.
+
+
+
+### Catching Errors in R
+
+- R is a language with precise rules. 
+- Small mistakes may produce an error message. 
+- Errors are normal: experienced programmers make them all the time. 
+- The goal is to read the message, find the problem, and try again.
+
+The next chunk is intentionally incomplete. Run the chunk, and read the error message. Then add the missing right parenthesis and run it again.
+
+```{r}
+# Fix the coding error 
+
+cat("This line is missing something."
+    
+```
+
+------------------------------------------------------------------------
+
 ### Read in the class survey data
 
 ------------------------------------------------------------------------
 
 ```{r}
 
-class_data <-  
+raw_data <- *** 
+
+  
+```
+
+```{r}
+
+ class_data <- raw_data %>% 
   mutate(across(c(fav_number, fav_season, pets, dominant_hand, risk_pref, study_sound),
                 as.factor))
-  
+
 ```
 
 ------------------------------------------------------------------------
@@ -236,8 +306,8 @@ Survey question: *What is your preferred wake up time?*
 class_data %>%
   # mutate(wake_up_time = 
   #        factor(wake_up_time,
-  #        levels = c("6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm (or later)"),
-  #        ordered = TRUE)) %>%
+  #        levels = c("6 am", "7 am", "8 am", "9 am", "10 am",
+  #                    "11 am", "12 pm", "1 pm (or later)"))) %>%
   ggplot(aes(x = , fill = )) +
   geom_bar() +
   labs( title = "Preferred wake up time?",
