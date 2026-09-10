@@ -1,6 +1,6 @@
 ---
 title: "Lab 1: Explore & Get Started in R"
-subtitle: "Lab 1 - PSY 150"
+subtitle: "PSY 150"
 author: "ADD_YOUR_NAME_HERE"
 date: "`r Sys.Date()`"
 output: 
@@ -42,9 +42,10 @@ library(ThemePark)
 
 ### How this lab will work!
 
-- Work from top to bottom. 
+- Work from top to bottom - Packages (libraries) always need to be loaded first!
 - Run a *code chunk* (grey box) by clicking the green triangle (upper right corner) OR by placing your cursor in the chunk and pressing **Ctrl + Shift + Enter** (Windows)
 
+------------------------------------------------------------------------
 
 ### Run the next `code chunk`
 
@@ -56,6 +57,7 @@ cat("Hello, World!\n")
 
 ```
 
+------------------------------------------------------------------------
 
 The fundamental building block of R code is an **expression**. 
 
@@ -71,19 +73,24 @@ cat("then the whole 🌏,\n")
 cat("and then this one.\n")
 ```
 
+------------------------------------------------------------------------
+
 ### Adding a new code chunk
 
 You can add a new R chunk by clicking the green +C button above OR by using the keyboard shortcut **Ctrl + Alt + I** (Windows).
 
-Add a new R code chunk below this paragraph. Use `cat()` to print:
+1. Add a new R code chunk below this paragraph. 
+2. Then use `cat()` to print:
 
 ``` text
 A whole new chunk! ♪ 🌏 ♪
 ```
 
-Run your new chunk to verify that it works.
+3. Run your new chunk to verify that it works.
 
 
+
+------------------------------------------------------------------------
 
 ### Catching Errors in R
 
@@ -107,19 +114,12 @@ cat("This line is missing something."
 
 ------------------------------------------------------------------------
 
+Read in the data to the R `Environment` and call the object `raw_data`
 ```{r}
 
-raw_data <- *** 
+raw_data <-  
 
   
-```
-
-```{r}
-
- class_data <- raw_data %>% 
-  mutate(across(c(fav_number, fav_season, pets, dominant_hand, risk_pref, study_sound),
-                as.factor))
-
 ```
 
 ------------------------------------------------------------------------
